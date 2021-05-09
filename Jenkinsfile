@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        docker{
+            image:'sgaby100/test:0.1'
+        }
+    }
 
     stages {
         stage('Gradle') {
