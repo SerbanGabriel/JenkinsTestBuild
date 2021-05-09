@@ -2,9 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Gradle') {
             steps {
-                echo 'Hello World..'
+                scripts{
+                    sh './gradlew clean'
+                }
             }
         }
         stage('Test') {
