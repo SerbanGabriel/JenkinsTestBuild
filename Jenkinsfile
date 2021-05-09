@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker  {
+        docker {
             image 'sgaby100/test:0.1'
         }
     }
